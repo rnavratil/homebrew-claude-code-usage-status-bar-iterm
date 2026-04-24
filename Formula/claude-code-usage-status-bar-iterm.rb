@@ -22,8 +22,9 @@ class ClaudeCodeUsageStatusBarIterm < Formula
 
       Then in iTerm2:
         1. Scripts → Manage → Install Python Runtime (if not done yet)
-        2. Scripts → AutoLaunch → claude-code-usage-status-bar-iterm.py
-        3. Preferences → Profiles → Session → Configure Status Bar
+        2. Restart iTerm2 (required for AutoLaunch scripts to be detected)
+        3. Scripts → AutoLaunch → claude-code-usage-status-bar-iterm.py
+        4. Preferences → Profiles → Session → Configure Status Bar
            Drag "Claude Usage" into the active components.
 
       To uninstall the symlink:
