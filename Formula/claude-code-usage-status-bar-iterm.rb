@@ -1,8 +1,8 @@
 class ClaudeCodeUsageStatusBarIterm < Formula
   desc "iTerm2 status bar component showing Claude Code usage limits in real time"
   homepage "https://github.com/rnavratil/claude-code-usage-status-bar-iterm"
-  url "https://github.com/rnavratil/claude-code-usage-status-bar-iterm/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "86691b7fdb33f88e454b04da19ea09caf90347dc1ad06005d030d24e62fcd8e4"
+  url "https://github.com/rnavratil/claude-code-usage-status-bar-iterm/archive/refs/tags/v1.0.1.tar.gz"
+  sha256 "82017c847ee10385771a2c0221197467c7a5fb6af180c7bb8e8062b776d49dfa"
   license "MIT"
 
   depends_on "jq"
