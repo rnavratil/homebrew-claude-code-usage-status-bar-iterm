@@ -15,7 +15,7 @@ class ClaudeCodeUsageStatusBarIterm < Formula
 
   def caveats
     <<~EOS
-      Run this command to finish setup (macOS blocks Homebrew from writing to ~/Library directly):
+      ⚠️  One manual step required to finish setup:
 
         ln -sf "#{prefix}/claude-code-usage-status-bar-iterm.py" \
           "$HOME/Library/Application Support/iTerm2/Scripts/AutoLaunch/claude-code-usage-status-bar-iterm.py"
