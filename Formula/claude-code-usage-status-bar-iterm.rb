@@ -18,7 +18,7 @@ class ClaudeCodeUsageStatusBarIterm < Formula
       Run this command to finish setup (macOS blocks Homebrew from writing to ~/Library directly):
 
         ln -sf "#{prefix}/claude-code-usage-status-bar-iterm.py" \
-          ~/Library/Application\ Support/iTerm2/Scripts/AutoLaunch/claude-code-usage-status-bar-iterm.py
+          "$HOME/Library/Application Support/iTerm2/Scripts/AutoLaunch/claude-code-usage-status-bar-iterm.py"
 
       Then in iTerm2:
         1. Scripts → Manage → Install Python Runtime (if not done yet)
@@ -27,7 +27,7 @@ class ClaudeCodeUsageStatusBarIterm < Formula
            Drag "Claude Usage" into the active components.
 
       To uninstall the symlink:
-        rm ~/Library/Application\ Support/iTerm2/Scripts/AutoLaunch/claude-code-usage-status-bar-iterm.py
+        rm "$HOME/Library/Application Support/iTerm2/Scripts/AutoLaunch/claude-code-usage-status-bar-iterm.py"
     EOS
   end
 
