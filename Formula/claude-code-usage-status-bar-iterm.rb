@@ -13,29 +13,21 @@ class ClaudeCodeUsageStatusBarIterm < Formula
     prefix.install "claude-code-usage-status-bar-iterm.py"
   end
 
-  def post_install
-    autolaunch = "#{Dir.home}/Library/Application Support/iTerm2/Scripts/AutoLaunch"
-    FileUtils.mkdir_p(autolaunch)
-    FileUtils.ln_sf(
-      "#{prefix}/claude-code-usage-status-bar-iterm.py",
-      "#{autolaunch}/claude-code-usage-status-bar-iterm.py"
-    )
-  end
-
-  def uninstall
-    autolaunch = "#{Dir.home}/Library/Application Support/iTerm2/Scripts/AutoLaunch"
-    FileUtils.rm_f("#{autolaunch}/claude-code-usage-status-bar-iterm.py")
-  end
-
   def caveats
     <<~EOS
-      The Python script has been symlinked to iTerm2's AutoLaunch folder.
+      Run this command to finish setup (macOS blocks Homebrew from writing to ~/Library directly):
 
-      Remaining manual steps:
-        1. In iTerm2: Scripts → Manage → Install Python Runtime (if not done yet)
-        2. In iTerm2: Scripts → AutoLaunch → claude-code-usage-status-bar-iterm.py
-        3. In iTerm2: Preferences → Profiles → Session → Configure Status Bar
+        ln -sf "#{prefix}/claude-code-usage-status-bar-iterm.py" \
+          ~/Library/Application\ Support/iTerm2/Scripts/AutoLaunch/claude-code-usage-status-bar-iterm.py
+
+      Then in iTerm2:
+        1. Scripts → Manage → Install Python Runtime (if not done yet)
+        2. Scripts → AutoLaunch → claude-code-usage-status-bar-iterm.py
+        3. Preferences → Profiles → Session → Configure Status Bar
            Drag "Claude Usage" into the active components.
+
+      To uninstall the symlink:
+        rm ~/Library/Application\ Support/iTerm2/Scripts/AutoLaunch/claude-code-usage-status-bar-iterm.py
     EOS
   end
 
